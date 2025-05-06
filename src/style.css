@@ -1,1 +1,27 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@layer theme {
+  :root {
+    --default-font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer base {
+  h1,h2,h3,h4,h5,h6{
+    font-family: var(--default-font-family);
+  }
+}
+
+@layer components{
+  .box{
+    @apply bg-gray-800 text-blue-50 dark:bg-black shadow-md rounded-lg p-4;
+  }
+}
+
+@layer utilities{
+  .aspect-portrait {
+    aspect-ratio: 1 / 2;
+  }
+}
