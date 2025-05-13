@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
@@ -18,13 +17,13 @@
 }
 
 @layer components{
-  .box{
-    @apply bg-gray-800 text-blue-50 dark:bg-black shadow-md rounded-md;
+  .box {
+    @apply relative rounded flex items-center justify-center overflow-hidden border border-dashed border-gray-300 col-span-1 row-span-1 aspect-square p-2;
   }
-
-  .box-double{
-    @apply col-span-2 row-span-2;
-    aspect-ratio: 2 / 2;
+    
+  .box-double {
+      @apply col-span-2 row-span-2;
+      aspect-ratio: 2 / 2; /* cuadrado grande */
   }
 
   .box img{
@@ -38,6 +37,17 @@
   }
 }
 
+main {
+  margin: 0 auto;
+  padding: 8%;
+}
+
 image {
   border-radius: 1rem;
+}
+
+.sentinel {
+  width: 100%;
+  margin-top: 20px;
+  opacity: 0;
 }

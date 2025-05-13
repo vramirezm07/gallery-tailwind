@@ -38,6 +38,7 @@ export class ImageGallery {
     this.currentQuery = '';
     this.isLoading = false;
     this.observer = null;
+    this.sentinel = null;
     this.setupIntersectionObserver();
   }
 
@@ -62,6 +63,10 @@ export class ImageGallery {
   }
 
   clearGallery() {
+    if (this.sentinel) {
+      this.observer.unobserve(this.sentinel);
+      this.sentinel = null;
+    }
     this.container.innerHTML = '';
   }
 
@@ -74,6 +79,15 @@ export class ImageGallery {
         const imageElement = this.createImageElement(image);
         this.container.appendChild(imageElement);
       });
+
+      // Agregar el elemento sentinel si no existe
+      if (!this.sentinel) {
+        this.sentinel = document.createElement('div');
+        this.sentinel.className = 'sentinel';
+        this.sentinel.style.height = '10px';
+        this.container.appendChild(this.sentinel);
+        this.observer.observe(this.sentinel);
+      }
 
       this.currentPage++;
     } catch (error) {

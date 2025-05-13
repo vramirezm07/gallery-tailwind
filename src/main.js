@@ -1,5 +1,5 @@
 import './style.css'
-import { ImageGallery } from './imageService';
+import { ImageGallery } from './imageService.js';
 
 class SearchForm {
     constructor() {
