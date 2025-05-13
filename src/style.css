@@ -9,6 +9,9 @@
 }
 
 @layer base {
+  img {
+    @apply w-full !h-full object-cover;
+}
   h1,h2,h3,h4,h5,h6{
     font-family: var(--default-font-family);
   }
@@ -16,7 +19,16 @@
 
 @layer components{
   .box{
-    @apply bg-gray-800 text-blue-50 dark:bg-black shadow-md rounded-lg p-4;
+    @apply bg-gray-800 text-blue-50 dark:bg-black shadow-md rounded-md;
+  }
+
+  .box-double{
+    @apply col-span-2 row-span-2;
+    aspect-ratio: 2 / 2;
+  }
+
+  .box img{
+    @apply w-full h-full object-cover rounded-md;
   }
 }
 
@@ -24,4 +36,8 @@
   .aspect-portrait {
     aspect-ratio: 1 / 2;
   }
+}
+
+image {
+  border-radius: 1rem;
 }

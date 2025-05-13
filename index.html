@@ -7,19 +7,59 @@
     <title>Vite App</title>
   </head>
   <body class="box">
+
   <main class="box container mx-auto p-4">
+
+    <form id="searchForm" class="mb-8">
+      <div class="flex gap-4 max-w-2xl mx-auto">
+        <div class="flex-1">
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Buscar imágenes..."
+            required
+            minlength="3"
+            maxlength="50"
+          />
+          <div id="searchError" class="text-red-500 text-sm mt-1 hidden"></div>
+        </div>
+        <button 
+          type="submit"
+          class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Buscar
+        </button>
+      </div>
+    </form>
+
     <div class="box grid grid-cols-2 gap-2 md:grid-cols-5 lg:grid-cols-5"> 
-    <div class="box  aspect-square md:aspect-portrait  bg-blue-500">One</div> 
-    <div class="box  aspect-square md:aspect-portrait bg-blue-600">Two</div>
-    <div class="box  aspect-square md:aspect-portrait bg-blue-800">Three</div>
-    <div class="box  md:col-span-2 bg-blue-900 aspect-square">Shi</div>
-    <div class="box  md:col-span-2 bg-cyan-500 aspect-square">Go</div> 
-    <div class="box  aspect-square md:aspect-portrait bg-cyan-600 ">Roku</div>
-    <div class="box  aspect-square md:aspect-portrait bg-cyan-800 ">Nana</div>
-    <div class="box  aspect-portrait bg-cyan-900 ">Hachi</div>
-    <div class="box  aspect-square md:aspect-portrait bg-indigo-500 ">Kyu</div>
-    <div class="box  aspect-square md:aspect-portrait bg-indigo-600 ">Yu</div>
-    <div class="box  aspect-square md:aspect-portrait bg-indigo-700 ">Yuichi</div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-blue-500">
+      <img src="img/Rafayel_01.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div> 
+    <div class="box  aspect-square md:aspect-auto h-full bg-blue-600">
+      <img src="img/Rafayel_04.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-blue-800">
+      <img src="img/Rafayel_05.PNG" alt="" class="w-full h-full object-center object-cover"/>
+    </div>
+    <div class="box md:col-span-2 bg-blue-900 aspect-square">
+      <img src="img/Rafayel_03.PNG" alt="" class="h-full w-full object-center object-cover r" />
+    </div>
+    <div class="box  md:col-span-2 bg-cyan-500 aspect-square">
+      <img src="img/Sylus_04.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div> 
+    <div class="box  aspect-square md:aspect-auto h-full bg-cyan-600 ">
+      <img src="img/Sylus_02.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-cyan-800 ">
+      <img src="img/Sylus_03.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-cyan-900 ">
+      <img src="img/Slyus01.PNG" alt="" class="h-full w-full object-center object-cover" />
+    </div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-indigo-500 ">Kyu</div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-indigo-600 ">Yu</div>
+    <div class="box  aspect-square md:aspect-auto h-full bg-indigo-700 ">Yuichi</div>
     <div class="box md:col-span-2 bg-indigo-800 aspect-square">Yuni</div>
   </div>
   </main>
